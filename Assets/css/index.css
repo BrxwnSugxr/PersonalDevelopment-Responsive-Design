@@ -56,14 +56,19 @@ ul a {
 /* heading will be differnt size and differnt font type */
 h1 {
   font-size: 3.5 rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
-h2{
-
+h2 {
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
 }
-h3{
-
+h3 {
+  font-size: 2rem;
+  color: black;
 }
 
-p{
-    
+p {
+  line-height: 1.5rem;
+  margin-bottom: 1, 2rem;
 }
