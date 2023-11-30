@@ -42,3 +42,14 @@ nav ul a:hover {
   text-underline-offset: 2.1rem;
   text-decoration-line: underline;
 }
+
+li {
+  text-decoration: none;
+}
+
+ul a {
+  padding: 0.5 rem;
+  color: black;
+  text-decoration: none;
+}
+
