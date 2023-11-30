@@ -70,5 +70,69 @@ h3 {
 
 p {
   line-height: 1.5rem;
-  margin-bottom: 1, 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero {
+  background-image: url(../images/hero.jpg);
+  padding: 4rem;
+  height: 20%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-content {
+  text-align: center;
+  line-height: 1.2;
+}
+
+body {
+  font-size: 1em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 50px auto;
+}
+/* row for display */
+.main-row {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  width: 100%;
+}
+
+.article-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  border-right: 2px solid black;
+  flex: 1;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 4;
+}
+
+.article-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.article-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0.1rem;
+  border-color: 1rem solid aquamarine;
+  box-shadow: honeydew;
 }
