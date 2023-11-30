@@ -19,7 +19,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end; /* Updated this line */
   background-color: aquamarine;
   padding: 1rem;
 }
@@ -32,14 +32,11 @@ nav a {
   color: black;
 }
 
-label {
-  display: none;
-}
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0; /* Remove the default margin */
 }
 
 nav ul a {
@@ -87,7 +84,7 @@ h3 {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1;
   margin-bottom: 1.2rem;
 }
 
@@ -185,4 +182,37 @@ footer {
   text-align: center;
   position: sticky;
   bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul a {
+    padding: 0.5rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .article-row {
+    flex-direction: column;
+  }
+
+  .article-title,
+  .article-content {
+    border: none;
+    padding: 10px;
+  }
+
+  .topic-column {
+    margin: 0.625rem 0;
+  }
+
+  .topic-column img {
+    transition: none; /* Remove the transition effect on smaller screens */
+  }
 }
