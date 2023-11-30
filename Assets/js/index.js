@@ -1,11 +1,5 @@
-function openNewPage(url) {
-  window.open(url, '_blank');
-}
+// index.js
 
-function hoverImage(element) {
-  element.style.opacity = '0.7';
-}
-
-function unhoverImage(element) {
-  element.style.opacity = '1';
+function openNewPage(pageURL) {
+  window.location.href = pageURL;
 }

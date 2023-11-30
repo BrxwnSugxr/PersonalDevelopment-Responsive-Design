@@ -1,27 +1,35 @@
-/* colour pallete */
+/* Color palette for personal development theme */
 :root {
+  --primary-color: teal; /* Main color for emphasis (Blue) */
+  --background-color: #ecf0f1; /* Background color (Light Gray) */
+  --text-color: #2c3e50; /* Text color (Dark Gray) */
+  --accent-color: #e74c3c; /* Accent color for highlights (Red) */
+  --font-style1: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --font-style2: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  --font-style3: 'Unna', serif;
 }
 
 /* global styles */
 * {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-style1);
   padding: 0;
-  margin-top: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-/* header, inclusive of nav bar */
+/* header, nav bar */
 header {
-  background-color: aliceblue;
   width: 100%;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Updated this line */
-  background-color: aquamarine;
-  padding: 1rem;
+  justify-content: flex-end;
+  background-color: var(--primary-color);
+  padding: 1.25rem;
 }
 
 nav a {
@@ -29,68 +37,72 @@ nav a {
   text-transform: capitalize;
   font-weight: 400;
   font-size: 1.25rem;
-  color: black;
+  color: var(--background-color);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0; /* Remove the default margin */
+  margin: 0;
 }
 
 nav ul a {
   padding: 0.5rem;
-  color: var(--white);
-  text-decoration: none;
+  color: var(--background-color);
 }
 
 nav ul a:hover {
   text-decoration-line: underline;
 }
 
-li {
-  text-decoration: none;
+/* body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 1em;
 }
 
-/* bottom nav */
-ul a {
-  padding: 0.5rem;
-  color: var(--white);
-  text-decoration: none;
-}
-nav ul a:visited {
-  color: black;
-}
-
-nav ul a:active {
-  color: black;
+/* footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 10px;
+  text-align: center;
+  margin-top: auto; /* This will push the footer to the bottom */
 }
 
 /* text styles */
 h1 {
   font-size: 3.5rem;
-  font-family: 'Bodoni Moda', serif;
+  font-family: var(--font-style2);
+  color: var(--background-color);
 }
 
 h2 {
   font-size: 30px;
-  font-family: 'Unna', serif;
+  font-family: var(--font-style3);
+  color: var(--text-color);
 }
 
 h3 {
   font-size: 2rem;
-  color: var(--white);
+  color: var(--text-color);
 }
 
-p {
-  line-height: 1;
+.title {
+  line-height: 1.5;
   margin-bottom: 1.2rem;
+  color: var(--background-color);
+}
+p {
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  color: var(--text-color);
 }
 
-/* hero section, with image, text and button*/
+/* hero section, with image, text, and button*/
 .hero {
-  /* margin-top: 5rem; */
   padding: 4rem;
   background-image: url(../images/hero.jpg);
   object-fit: cover;
@@ -103,12 +115,7 @@ p {
   line-height: 1.2;
 }
 
-/* general design */
-body {
-  font-size: 1em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
+/* main content */
 main {
   margin: 50px auto;
   display: flex;
@@ -139,6 +146,8 @@ main {
   padding: 20px;
   flex: 4;
 }
+
+/* topic columns */
 .topic-row {
   display: flex;
   flex-direction: row;
@@ -150,10 +159,11 @@ main {
   flex-direction: column;
   position: relative;
   margin: 0.625rem;
-  border: 1px solid green; /* Adjust the border as needed */
+  border: 1px solid var(--accent-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 300px; /* Set a fixed height for consistent row heights */
+  height: 300px;
 }
+
 .topic-column img {
   object-fit: cover;
   width: 100%;
@@ -169,21 +179,13 @@ main {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
+  color: var(--background-color);
   font-size: 20px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-footer {
-  background-color: #333; /* Set your preferred background color */
-  color: white;
-  padding: 10px;
-  text-align: center;
-  position: sticky;
-  bottom: 0;
-}
-
+/* Responsive styles */
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
